@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="js/index.js"></script>
+
+    <script src="js/top.js"></script>
+  </head>
+
+  <body>
+    <h1>MultiModal English Learning Platfrom</h1>
+    <hr />
+
+    <div class="h2" align="center" id="pagination">
+      <h2 id="result">Selected Word: A</h2>
+
+      <select id="letter" onclick="GetSelectedValue()">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="E">E</option>
+        <option value="F">F</option>
+        <option value="G">G</option>
+        <option value="H">H</option>
+        <option value="I">I</option>
+        <option value="J">J</option>
+        <option value="K">K</option>
+        <option value="L">L</option>
+        <option value="M">M</option>
+        <option value="N">N</option>
+        <option value="O">O</option>
+        <option value="P">P</option>
+        <option value="Q">Q</option>
+        <option value="R">R</option>
+        <option value="S">S</option>
+        <option value="T">T</option>
+        <option value="U">U</option>
+        <option value="V">V</option>
+        <option value="W">W</option>
+        <option value="X">X</option>
+        <option value="Y">Y</option>
+        <option value="Z">Z</option>
+      </select>
+    </div>
+    <div align="right">
+      <input
+        type="text"
+        placeholder="Search.."
+        name="search"
+        id="search"
+        onfocus="this.value=''"
+      />
+      <button type="submit" onclick="search()">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+    <hr />
+
+    <form></form>
+    <table id="tbl">
+      <thead>
+        <tr></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <button onclick="topFunction()" id="top" title="Go to top">Top</button>
+  </body>
+
+  <script></script>
+</html>

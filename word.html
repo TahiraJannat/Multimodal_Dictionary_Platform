@@ -1,0 +1,76 @@
+<html>
+
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+
+<body align="center">
+  <div id="demoFont">
+    <div id="w"></div>
+    <div id="s"></div>
+    <div id="e"></div>
+    <div id="v">
+      <iframe width="420" height="345" id="vv" src=""></iframe>
+
+    </div>
+
+  </div>
+</body>
+<script>
+
+  var w, s, e, v, xy;
+
+  w = localStorage.getItem("word");
+  s = localStorage.getItem("synonym");
+  e = localStorage.getItem("example");
+  v = localStorage.getItem("video");
+
+
+  w = w.charAt(0).toUpperCase() + w.slice(1);
+  s = s.charAt(0).toUpperCase() + s.slice(1);
+  e = e.charAt(0).toUpperCase() + e.slice(1);
+  v = v.charAt(0).toUpperCase() + v.slice(1);
+ // alert(w + "<br>" + s + "<br>" + e + "<br>" + v);
+
+  document.getElementById("w").innerHTML = "Word: " + w + "<br>"  + "<br>";
+
+  if (s.length > 0) {
+    document.getElementById("s").innerHTML = "Synonym: " + s + "<br>" + "<br>";
+  }
+  else {
+    document.getElementById("s").innerHTML = " " ;
+  }
+
+
+  if (e.length > 0) {
+    document.getElementById("e").innerHTML = "Example: " + e + "<br>" + "<br>";
+  }
+  else {
+    document.getElementById("e").innerHTML = "";
+  }
+
+
+
+  if (v != "") {
+    document.getElementById("vv").src = v;
+
+  }
+
+  else {
+    var iframes = document.querySelectorAll('iframe');
+    for (var i = 0; i < iframes.length; i++) {
+      iframes[i].parentNode.removeChild(iframes[i]);
+    }
+    document.getElementById("v").innerHTML = "There is no video for this word  ";
+
+
+  }
+
+
+</script>
+
+</html>
